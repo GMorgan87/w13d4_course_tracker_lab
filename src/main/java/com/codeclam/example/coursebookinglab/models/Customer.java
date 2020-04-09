@@ -21,13 +21,13 @@ public class Customer {
     private String town;
 
     @Column
-    private String age;
+    private Integer age;
 
     @JsonIgnore
     @OneToMany(mappedBy = "customer")
     private List<Booking> bookings;
 
-    public Customer(String name, String town, String age) {
+    public Customer(String name, String town, Integer age) {
         this.name = name;
         this.town = town;
         this.age = age;
@@ -62,11 +62,11 @@ public class Customer {
         this.town = town;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

@@ -22,13 +22,13 @@ public class Course {
     private String town;
 
     @Column
-    private int rating;
+    private Integer rating;
 
     @JsonIgnore
     @OneToMany(mappedBy = "course")
     private List<Booking> bookings;
 
-    public Course(String name, String town, int rating) {
+    public Course(String name, String town, Integer rating) {
 
         this.name = name;
         this.town = town;
@@ -63,7 +63,7 @@ public class Course {
         this.town = town;
     }
 
-    public int getRating() {
+    public Integer getRating() {
         return rating;
     }
 
